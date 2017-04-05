@@ -21,26 +21,20 @@ public class MapGenerator : MonoBehaviour {
         GenerateMap();
     }
 
-<<<<<<< HEAD
 	void Update() {
 		if(Input.GetMouseButtonDown(0)) {
 				GenerateMap();
 		}
 	}
 
-=======
->>>>>>> 7acb6702354cb7497e34b18b864c7b23aa7ad9d8
     void GenerateMap()
     {
         map = new int[width, height];
 		RandomFillMap();
-<<<<<<< HEAD
 		for(int i = 0; i <5; i++) 
 		{
 			SmoothMap();
 		}
-=======
->>>>>>> 7acb6702354cb7497e34b18b864c7b23aa7ad9d8
     }
 
     void RandomFillMap()
@@ -49,17 +43,12 @@ public class MapGenerator : MonoBehaviour {
         {
             seed = Time.time.ToString();
         }
-<<<<<<< HEAD
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
-=======
-        System.Random psuedoRandom = new System.Random(seed.GetHashCode());
->>>>>>> 7acb6702354cb7497e34b18b864c7b23aa7ad9d8
 
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-<<<<<<< HEAD
 				if(x==0 || x == width-1 || y == 0 || y == height-1) {
 					map[x, y] = 1;
 				}
@@ -67,14 +56,10 @@ public class MapGenerator : MonoBehaviour {
 					map[x, y] = (pseudoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0;
 				}
                 
-=======
-                map[x, y] = (psuedoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0;
->>>>>>> 7acb6702354cb7497e34b18b864c7b23aa7ad9d8
             }
         }
     }
 
-<<<<<<< HEAD
 	void SmoothMap()
 	{
 		for (int x = 0; x < width; x++)
@@ -114,8 +99,6 @@ public class MapGenerator : MonoBehaviour {
 		return wallCount;
 	}
 
-=======
->>>>>>> 7acb6702354cb7497e34b18b864c7b23aa7ad9d8
     void OnDrawGizmos()
     {
         if(map != null)
